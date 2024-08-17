@@ -23,7 +23,7 @@ export default function Home() {
   let Guess = (event) => {
     let bal = payment;
     let n;
-    let num = Math.floor(Math.random() * 3 + 1);
+    let num = Math.floor(Math.random() * 10 + 1);
     guessNum = num;
     setGuessNum(guessNum);
     let hi = parseInt(event.target.inp.value);
@@ -33,7 +33,7 @@ export default function Home() {
         event.preventDefault();
         return;
       }
-      alert(guessNum);
+      
       if (hi === guessNum) {
         toast.success("Value Matched");
         n = Balance + (bal * 2);
